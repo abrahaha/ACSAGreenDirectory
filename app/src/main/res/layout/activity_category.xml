@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_category"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.haben.acsagreendirectory.CategoryActivity">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/navigation_horizontal_margin"
+        android:layout_marginStart="@dimen/navigation_horizontal_margin"
+        android:text="@string/home_button"
+        android:background="@android:color/transparent"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/homeButton"
+        android:textSize="@dimen/navigation_text_size"
+        android:paddingBottom="@dimen/navigation_vertical_margin"
+        android:paddingTop="@dimen/navigation_vertical_margin"
+        />
+
+    <TextView
+        android:text="@string/favourites_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/favouriteButton"
+        android:textSize="@dimen/navigation_text_size"
+        android:paddingBottom="@dimen/navigation_vertical_margin"
+        android:paddingTop="@dimen/navigation_vertical_margin"
+        />
+
+    <TextView
+        android:text="@string/filter_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="@dimen/navigation_horizontal_margin"
+        android:layout_marginEnd="@dimen/navigation_horizontal_margin"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/filterButton"
+        android:textSize="@dimen/navigation_text_size"
+        android:paddingBottom="@dimen/navigation_vertical_margin"
+        android:paddingTop="@dimen/navigation_vertical_margin"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filterButton"
+        android:background="@drawable/acsa_startscreen_bluelight1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+    </RelativeLayout>
+
+</RelativeLayout>

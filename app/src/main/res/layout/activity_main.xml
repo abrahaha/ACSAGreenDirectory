@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/acsa_startscreen_bluelight1"
+    tools:context="com.example.haben.acsagreendirectory.MainActivity">
+
+    <ImageView
+        android:layout_height="@dimen/logo_container_height_port"
+        android:layout_width="@dimen/logo_container_width_port"
+        android:background="@color/colorTransparent"
+        android:src="@mipmap/ic_launch_icon"
+        android:scaleType="centerCrop"
+        android:id="@+id/ACSAlogoContainer"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp">
+
+    </ImageView>
+
+    <TextView
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="35sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="122dp" />
+
+</RelativeLayout>

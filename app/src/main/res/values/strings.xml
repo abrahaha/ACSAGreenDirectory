@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Agincourt Community Services Association\n\n\nGreen Directory</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_dashboard_home">Dashboard</string>
+    <string name="home_button">Home</string>
+    <string name="favourites_button">Favourites</string>
+    <string name="filter_button">Filter</string>
+    <string name="search_title">Search for services</string>
+    <string name="childcare_category_title">"Child Care &amp; Family Services"</string>
+    <string name="community_category_title">"Community"</string>
+    <string name="disability_category_title">"Services for People with Disabilities</string>
+    <string name="education_category_title">Education</string>
+    <string name="employment_category_title">Employment and Employment Training</string>
+    <string name="faith_category_title">Faith Communities</string>
+    <string name="food_category_title">Food, Clothing, &amp; Furniture></string>
+    <string name="government_category_title">Government Services</string>
+    <string name="health_category_title">Health</string>
+    <string name="housing_category_title">Housing</string>
+    <string name="legal_category_title">Legal &amp; Financial Services</string>
+    <string name="media_category_title">Media</string>
+    <string name="seniors_category_title">Seniors\' Services</string>
+    <string name="settlement_category_title">Settlement Services</string>
+    <string name="transportation_category_title">Transportation - General</string>
+    <string name="womens_category_title">Women\'s Services</string>
+    <string name="youth_category_title">Youth</string>
+    <string name="title_activity_category">CategoryActivity</string>
+</resources>

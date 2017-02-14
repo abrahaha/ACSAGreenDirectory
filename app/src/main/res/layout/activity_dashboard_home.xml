@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_dashboard_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.haben.acsagreendirectory.DashboardHomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:id="@+id/relativeLayout"
+        >
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/navigation_horizontal_margin"
+            android:layout_marginStart="@dimen/navigation_horizontal_margin"
+            android:text="@string/home_button"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/homeButton"
+            android:textSize="@dimen/navigation_text_size"
+            android:paddingBottom="@dimen/navigation_vertical_margin"
+            android:paddingTop="@dimen/navigation_vertical_margin"
+            />
+
+        <TextView
+            android:text="@string/favourites_button"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/favouriteButton"
+            android:textSize="@dimen/navigation_text_size"
+            android:paddingBottom="@dimen/navigation_vertical_margin"
+            android:paddingTop="@dimen/navigation_vertical_margin"
+            />
+
+        <TextView
+            android:text="@string/filter_button"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/navigation_horizontal_margin"
+            android:layout_marginEnd="@dimen/navigation_horizontal_margin"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/filterButton"
+            android:textSize="@dimen/navigation_text_size"
+            android:paddingBottom="@dimen/navigation_vertical_margin"
+            android:paddingTop="@dimen/navigation_vertical_margin"
+            />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/acsa_startscreen_bluelight1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:src="@drawable/ic_category_childcare"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/childcareImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/childcareImage"
+                android:textColor="@color/colorAccent"
+                android:text="@string/childcare_category_title"
+                android:id="@+id/childcareText">
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:src="@drawable/ic_category_community"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/communityImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/communityImage"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorAccent"
+                android:text="@string/community_category_title"
+                android:id="@+id/communityText">
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/childcareText"
+                android:src="@drawable/ic_category_disability"
+                android:id="@+id/disabilityServicesImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/disabilityServicesImage"
+                android:textColor="@color/colorAccent"
+                android:text="@string/disability_category_title"
+                android:id="@+id/disabilityServicesText"
+                >
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/communityText"
+                android:src="@drawable/ic_category_education"
+                android:id="@+id/educationImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/educationImage"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorAccent"
+                android:text="@string/education_category_title"
+                android:id="@+id/educationText">
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/disabilityServicesText"
+                android:src="@drawable/ic_category_employment"
+                android:id="@+id/employmentImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/employmentImage"
+                android:textColor="@color/colorAccent"
+                android:text="@string/employment_category_title"
+                android:id="@+id/employmentText"
+                >
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/educationText"
+                android:src="@drawable/ic_category_faith"
+                android:id="@+id/faithImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/faithImage"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorAccent"
+                android:text="@string/faith_category_title"
+                android:id="@+id/faithText">
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/employmentText"
+                android:src="@drawable/ic_category_food"
+                android:id="@+id/foodImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/foodImage"
+                android:textColor="@color/colorAccent"
+                android:text="@string/food_category_title"
+                android:id="@+id/foodText"
+                >
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/faithText"
+                android:src="@drawable/ic_category_government"
+                android:id="@+id/governmentImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/governmentImage"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorAccent"
+                android:text="@string/government_category_title"
+                android:id="@+id/governmentText">
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/foodText"
+                android:src="@drawable/ic_category_health"
+                android:id="@+id/healthImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/healthImage"
+                android:textColor="@color/colorAccent"
+                android:text="@string/health_category_title"
+                android:id="@+id/healthText"
+                >
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/governmentText"
+                android:src="@drawable/ic_category_housing"
+                android:id="@+id/housingImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/housingImage"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorAccent"
+                android:text="@string/housing_category_title"
+                android:id="@+id/housingText">
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/healthText"
+                android:src="@drawable/ic_category_legal"
+                android:id="@+id/legalImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/legalImage"
+                android:textColor="@color/colorAccent"
+                android:text="@string/legal_category_title"
+                android:id="@+id/legalText"
+                >
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/housingText"
+                android:src="@drawable/ic_category_media"
+                android:id="@+id/mediaImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/mediaImage"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorAccent"
+                android:text="@string/media_category_title"
+                android:id="@+id/mediaText">
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/legalText"
+                android:src="@drawable/ic_category_seniors"
+                android:id="@+id/seniorsImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/seniorsImage"
+                android:textColor="@color/colorAccent"
+                android:text="@string/seniors_category_title"
+                android:id="@+id/seniorsText"
+                >
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/mediaText"
+                android:src="@drawable/ic_category_settlement"
+                android:id="@+id/settlementImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/settlementImage"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorAccent"
+                android:text="@string/settlement_category_title"
+                android:id="@+id/settlementText">
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/seniorsText"
+                android:src="@drawable/ic_category_transportation"
+                android:id="@+id/transportationImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/transportationImage"
+                android:textColor="@color/colorAccent"
+                android:text="@string/transportation_category_title"
+                android:id="@+id/transportationText"
+                >
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/seniorsText"
+                android:src="@drawable/ic_category_womens"
+                android:id="@+id/womensImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/womensImage"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorAccent"
+                android:text="@string/womens_category_title"
+                android:id="@+id/womensText">
+            </TextView>
+
+            <ImageView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_image_height_port"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/womensText"
+                android:src="@drawable/ic_category_youth"
+                android:id="@+id/youthImage"
+                android:scaleType="fitXY"
+                android:onClick="openCategory"/>
+
+            <TextView
+                android:layout_width="@dimen/category_image_width_port"
+                android:layout_height="@dimen/category_text_height"
+                android:gravity="center"
+                android:layout_below="@id/youthImage"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorAccent"
+                android:text="@string/youth_category_title"
+                android:id="@+id/youthText">
+            </TextView>
+
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>
